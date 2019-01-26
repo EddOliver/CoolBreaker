@@ -1,12 +1,12 @@
-#CoolBreaker: Automotive Smart Circuit breaker, and switch
+# CoolBreaker: Automotive Smart Circuit breaker, and switch
 
 https://www.hackster.io/Edoliver/coolbreaker-automotive-smart-circuit-breaker-and-switch-d4b7d0
 
-Automotive Smart Circuit breaker and switch to increase efficiency in your car's electrical system and prevent electrical hazards.
+## Automotive Smart Circuit breaker and switch to increase efficiency in your car's electrical system and prevent electrical hazards.
 
 <img src="https://hackster.imgix.net/uploads/attachments/735942/thumb2_euTjqnfjwv.png?auto=compress%2Cformat&w=900&h=675&fit=min">
 
-Bill of Materials
+## Bill of Materials
 
 Hardware components
 - CoolMOS C7 Gold SJ MOSFET	
@@ -25,10 +25,10 @@ Software apps and online services
 - Fusion 360	
 - Autodesk Fusion 360
 
-#Story
+## Story
 CoolBreaker: Automotive Smart Circuit breaker, battery protection and switch.
 
-#Introduction and problem
+## Introduction and problem
 For several years now the automotive industry have relied on car fuses as they are cheap and easily changeable. Most cars have a fuse box that looks like this in order to manage their electrical system:
 
 <img src="https://hackster.imgix.net/uploads/attachments/705202/image_sPNJhYXxWv.png?auto=compress%2Cformat&w=740&h=555&fit=max">
@@ -53,7 +53,7 @@ But, what do we have in hand for electrical automotive protection?
 
 Lets analyze both options:
 
-Fuses and Relays
+### Fuses and Relays
 
 <img src="https://hackster.imgix.net/uploads/attachments/735813/image_Cs6Q1JS83n.png?auto=compress%2Cformat&w=740&h=555&fit=max">
 
@@ -78,7 +78,7 @@ Even aircraft has improved their capabilities with solid state solutions such as
 
 There is no other option easily attainable in the market nowadays....let's try building one.
 
-Solution
+## Solution
 Enter CoolBreaker the Solid State Circuit Breaker using the extremely impressive CoolMOS 600 C7 from Infineon.
 
 If you are going to replicate this experiment please use every security measure possible, DC energy is much safer that AC but still when managing these currents accidents can happen.
@@ -98,7 +98,7 @@ A solid state solution for this will actually be leaps and bounds better than th
 
 We have to take into consideration that this will be an auxiliary to the PDU for the accesories. Powering up a vehicle requires between 250 and 1000 amps for a cold start so it is quite difficult to do just with silicon. This product will be able to protect your accesories, your battery and will increment its electrical efficiency enourmously.
 
-Design
+## Design
 Instead of fitting everything into a small pcb and lets say controlling everything via an ATTiny, I want this proyect to be easily doable for any maker at home without having to order expensive PCB that he may not be able to solder, so everything will be done in a modular fashion.
 
 We will be using:
@@ -111,7 +111,8 @@ And we will control it via the Adafruit's Feather HUZZAH with the ESP32 in order
 <img src="https://hackster.imgix.net/uploads/attachments/735822/image_IK2p63XyLk.png?auto=compress%2Cformat&w=740&h=555&fit=max">
 To use the CoolMOS we indeed will build a little pcb module.
 I want to know two things with this setup, exactly how much current is passing through and if it passes our threshold that will be determined by the load. This will be done on an app and via serial obviously.
-First step:
+
+## First step:
 First I began designing the PCB as the CoolMOS provided by Infineon came in, is SMD version on a HSOF package.
 
 The main goal for this module is to create a PCB that can be attached via headers to any other contraption that the community might want to design later. YES, the module by itself is marketable as it provides an easy way for makers and hobbyists to come up with new solutions.
@@ -147,7 +148,7 @@ Here is the result:
 
 <img src="https://hackster.imgix.net/uploads/attachments/735828/image_H20ZUaPUQa.png?auto=compress%2Cformat&w=740&h=555&fit=max">
 
-Second step
+## Second step
 Now its time to go full circle and create the full product by joining the boards together. But first, time to test everything in the lab!
 
 Here is the building process with a little narration:
@@ -193,12 +194,12 @@ This is the most important part of the code as you can see it reads the Analog p
 
 I know what you are saying: Ohhh but Edoliver the Feather ESP32 works on 3.3V logic!
 
-Third and last step.
+## Third and last step.
 Testing and Showcase!
 
 https://www.youtube.com/watch?v=gUYDCipCUN8
 
-Future Rollout and Analysis
+## Future Rollout and Analysis
 So we have a tentative module for 13 Dollar aproximatelly.
 
 It protects from overcurrents
